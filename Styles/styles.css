@@ -47,22 +47,35 @@
     );
   }
 
+*{
+    margin:0px;
+    padding: 0px;
+}
 body{
-    padding-top: 8px; 
+    /* padding-top: 8px;  */
     font-family: var(--body-font);
     overflow-x: hidden;
 }
 
 .Header-canvas{
     position: absolute;
-    background-color: #6563ff;
-    width: 200%;
-    height: 800px;
+    width: 0px;
+    height: 0px;
+    border-left: 3500px solid #6563ff;
+    border-bottom: 450px solid transparent;
+    top: 0px;
     z-index: -1;
-    top: -450px;
-    left: -100px;
+    /* left: -100px;
     transform: rotate(-10deg);
-    overflow: hidden;
+    overflow: hidden; */ */
+}
+.triangulo{
+    width: 0;
+    height: 0;
+    border-left: 100px solid red;
+    border-right: 250px solid transparent;
+    border-bottom: 500px solid aqua;
+
 }
 
 nav {
@@ -80,6 +93,9 @@ nav {
 
 a{
     text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
 }
 
 .navList li a{
@@ -114,12 +130,31 @@ a{
     align-items: center;
     width:200px;    
 }
+.secondary-button{
+    margin: var(--spacing-md);
+    width: 200px;
+    background-color:white;
+    padding: 8px 16px;
+    color: var(--purple-2);
+    font-weight: 800;
+    font-size: var(--p-size);
+}
+.primary-button:hover{
+    opacity: 0.5;
+    font-size: 20px;
+}
+/* .secondary-button:hover{
+    color: white;
+} */
 
 .icon{
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
+}
+.icon:hover {
+    justify-content: space-around; 
 }
 
 nav button.Sign-in{
@@ -160,12 +195,6 @@ nav button.Sign-in{
     height: 600px;
 }
 
-.secondary-button{
-    background-color:var(--bg-light);
-    color: var(--purple-2);
-    font-weight: 800;
-    font-size: var(--p-size);
-}
 
 div.allies{
     display: grid;
