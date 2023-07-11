@@ -242,7 +242,7 @@ div.allies {
 }
 
 div.allies img{
-    max-width: 200px;
+    width: 200px;
     height: auto;
     padding: 10px;
 }
@@ -452,8 +452,16 @@ img.icon{
         border:1px solid var(--bg-light)
     }
 
+    .section1--column1 h1{
+        font-size: 4.5rem;
+    }
+
     .column2 img{
         display: none
+    }
+
+    div.allies{
+        justify-content: center;
     }
 
     
