@@ -358,7 +358,7 @@ h2{
     background-color: var(--primary-accent);
     width: 3000px;
     height: 150%;
-    top:-200px;
+    top:-25%;
     left: -75%;
     transform: rotate(-10deg);
     z-index: -1;
