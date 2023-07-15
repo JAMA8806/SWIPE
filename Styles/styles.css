@@ -39,11 +39,11 @@
     --standard-border-radius: 20px;
     --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
     --primary-gradient: linear-gradient(
-      101.33deg,
-      #08209a 0.76%,
-      #6563ff 33.33%,
-      #36c5f0 76.92%,
-      #83e2ff 96.96%
+        101.33deg,
+        #08209a 0.76%,
+        #6563ff 33.33%,
+        #36c5f0 76.92%,
+        #83e2ff 96.96%
     );
   }
 
@@ -311,7 +311,8 @@ h2{
     margin-bottom: 15px;
 }
 
-.section2-btn{
+.section2-btn,
+.section6-btn{
     background-color: var(--purple-1);
 }
 
@@ -354,13 +355,23 @@ h2{
 }
 
 .section3-container,
-.section5-container{
+.section5-container,
+.section6-container{
     display: flex;
     gap:0.5rem;
 }
 
 .section3-container::before,
 .section5-container::before{
+    content: "";
+    position: absolute;
+    background-color: var(--primary-accent);
+    width: 150%;
+    height: 120%;
+    top:-80px;
+    left:-25%; 
+    transform: skewY(-10deg);
+    z-index: -1;
     content: "";
     position: absolute;
     background-color: var(--primary-accent);
@@ -422,7 +433,7 @@ img.icon{
 }
 
 .section4-container {
-    margin: 15rem 0px;
+    margin: 8rem 0px;
     padding: 4rem 0px;
     display: flex;
     flex-direction: column;
@@ -467,6 +478,75 @@ img.icon{
 .section5 .inner-container div{
     max-width:20% ;
 }
+.section6-container{
+    display: flex;
+    padding: 3rem 0;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.section6-container .column1{
+    width: 49%;
+}
+.section6-container .column2{
+    width: 49%;
+    min-width: 450px;
+}
+
+.section6-container .column2 .card {
+    border:none;
+    border-radius: var(--standard-border-radius);
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 2rem;
+    box-shadow: var(--standard-box-shadow);
+}
+
+.section6-container .column2 .card .canva{ 
+    width: 100%;
+    justify-content: center;
+} 
+.section6-container .column2 .card .canva img{
+    margin: auto;
+    display: block;
+    width: 300px;
+} 
+.section6-container .column2 .card .canva::before{
+    content: "";
+    position: absolute;
+    background-color: rgba(33, 131, 166, 0.453);
+    width: 120%;
+    height: 80%;
+    top: -35%;
+    left: -10%;
+    transform: skewY(-10deg);
+    z-index: -1;
+}
+.innercard{
+    margin-top: 40px;
+    width: 50%;
+    position: relative;
+}
+
+.av{
+    width: 80px;
+    margin-bottom: 3rem;
+}
+.av2{
+    position:absolute;
+    left:20%;
+}
+
+.innercard h4{
+    margin-bottom: 2rem ;
+}
+
 
 @media screen and (max-width:768px) { 
     :root{
@@ -531,6 +611,22 @@ img.icon{
         opacity: 0.2;
         position: absolute;
     }
+    .section6{
+        position: relative;
+        z-index: 0;
+        background-color: var(--bg-light);
+    }
+    .section6-container .column2 img{
+        display: inline-block;
+    }
+    .section6-container .column1{
+        width: auto;
+        margin-bottom: 2rem;
+    }
+    .section6-container .column2{
+        width: 100%;
+        min-width: 200px;
+    }
 }
 @media screen and (max-width: 480px){
     .column1{
@@ -539,6 +635,9 @@ img.icon{
     }
     .section1--column1 h1{
         font-size: 3rem;
+    }
+    .section6-container .column2 .card{
+        padding: 1rem;
     }
 }
 
