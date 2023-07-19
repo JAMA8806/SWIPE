@@ -546,6 +546,51 @@ img.icon{
 .innercard h4{
     margin-bottom: 2rem ;
 }
+footer{
+    width: 100vw;
+    background-color: var(--bg-light);
+    justify-content: center;
+
+}
+
+.footer-container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+    gap: 2rem;
+}
+
+.footer-container .column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    color: var(--text-dark);
+}
+
+.footer-container .column h6{
+    font-size: var(--h6-size);
+    color: var(--primary-accent);
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+.footer-container .column a img{
+    width: 24px;
+}
+
+.footer-container .column a{
+    transition: color 0.5s ease;
+}
+.footer-container .column a:hover{
+    text-decoration: underline;
+    color: var(--blue-1);
+    cursor: pointer;
+}
 
 
 @media screen and (max-width:768px) { 
